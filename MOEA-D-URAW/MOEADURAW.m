@@ -1,13 +1,14 @@
 function MOEADURAW(Global)
 % <algorithm> <2>
-% MOEA/D with adaptive weight adjustment
-% delta --- 0.8 --- The probability of choosing parents locally
+% MOEA/D with Uniform Randomly Adaptive Weights
+% delta --- 0.9 --- The probability of choosing parents locally
 % nr    ---   2 --- Maximum number of solutions replaced by each offspring
 
 %------------------------------- Reference --------------------------------
-% DE FARIAS, Lucas RC et al. MOEA/D with uniformly randomly adaptive 
-% weights. In: Proceedings of the Genetic and Evolutionary Computation 
-% Conference. ACM, 2018. p. 641-648.
+% FARIAS, L. R. and ARAÚJO, A. F. Many-Objective Evolutionary Algorithm 
+% Based on Decomposition With Random and Adaptive Weights. In SMC’19: Proc. 
+% of 2019 IEEE International Conference on Systems, Mans and Cybernetics, 
+% accepted for publication.
 %------------------------------- Copyright --------------------------------
 % Copyright (c) 2018-2019 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
@@ -18,7 +19,7 @@ function MOEADURAW(Global)
 %--------------------------------------------------------------------------
 
     %% Parameter setting
-    [delta,nr] = Global.ParameterSet(0.8,2);
+    [delta,nr] = Global.ParameterSet(0.9,2);
 
     %% Generate the weight vectors
     %[W,Global.N] = UniformPoint(Global.N,Global.M);
